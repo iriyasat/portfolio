@@ -1222,3 +1222,8 @@ footer {
     width: 100%;
   }
 }
+
+/* Formspree SDK helper states */
+[data-fs-success], [data-fs-error] {
+  display: none;
+}
