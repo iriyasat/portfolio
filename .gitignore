@@ -1,0 +1,7 @@
+# Ignore raw files in root (we have copies in /assets)
+Ibrahim Hasan PPP3.jpg
+Ibrahim Hasan_CV.pdf
+
+# OS generated files
+.DS_Store
+Thumbs.db
