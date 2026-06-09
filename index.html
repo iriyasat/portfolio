@@ -3,61 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ibrahim Hasan | Student & Freelancer</title>
-  <meta name="description" content="Portfolio of Ibrahim Hasan - Student, Freelancer, IoT developer, and BS in Computer Science student at Independent University, Bangladesh.">
+  <title>Ibrahim Hasan | Computer Science Student & Technical Freelancer</title>
+  <meta name="description" content="Official portfolio of Ibrahim Hasan. BS in Computer Science student at Independent University, Bangladesh. Specializing in Software Engineering, IoT Hardware, and Technical Web Research.">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- Stylesheets -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
   
   <!-- FontAwesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="dark-mode">
-  
-  <!-- Custom Cursor -->
-  <div class="custom-cursor"></div>
-  <div class="custom-cursor-outline"></div>
-
-  <!-- Background Decorative Elements -->
-  <div class="glow-bg glow-1"></div>
-  <div class="glow-bg glow-2"></div>
-  <div class="glow-bg glow-3"></div>
+<body>
 
   <!-- Header / Navigation -->
   <header>
     <div class="nav-container">
       <a href="#" class="logo">
-        <span class="logo-accent">&lt;</span>ih<span class="logo-accent">/&gt;</span>
+        <span class="logo-symbol">&lt;</span>ih<span class="logo-symbol">/&gt;</span>
       </a>
-      
-      <nav class="nav-links">
+
+      <nav class="main-nav">
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#certifications" class="nav-link">Certifications</a>
-        <a href="#fun-zone" class="nav-link">Hala Madrid!</a>
-        <a href="assets/cv.pdf" download="Ibrahim_Hasan_CV.pdf" class="nav-link cv-download-link"><i class="fa-solid fa-download"></i> CV</a>
-        <a href="#contact" class="btn btn-primary contact-btn">Contact</a>
+        <a href="#credentials" class="nav-link">Credentials</a>
+        <a href="assets/cv.pdf" download="Ibrahim_Hasan_CV.pdf" class="nav-link cv-download"><i class="fa-solid fa-arrow-down-to-line"></i> Resume</a>
+        <a href="#contact" class="btn btn-primary contact-btn">Get In Touch</a>
       </nav>
 
-      <div class="nav-toggles">
-        <!-- Language Toggle (ES/EN) -->
-        <button id="lang-toggle" class="lang-btn" title="Toggle Spanish / Alternar Español">
-          <span class="lang-text">EN</span> <i class="fa-solid fa-globe"></i>
-        </button>
-        <!-- Mobile Menu Icon -->
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </div>
+      <!-- Mobile Hamburger -->
+      <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
   </header>
 
@@ -67,48 +51,41 @@
     <a href="#skills" class="mobile-nav-link">Skills</a>
     <a href="#experience" class="mobile-nav-link">Experience</a>
     <a href="#projects" class="mobile-nav-link">Projects</a>
-    <a href="#certifications" class="mobile-nav-link">Certifications</a>
-    <a href="#fun-zone" class="mobile-nav-link">Hala Madrid!</a>
-    <a href="assets/cv.pdf" download="Ibrahim_Hasan_CV.pdf" class="mobile-nav-link"><i class="fa-solid fa-download"></i> Download CV</a>
-    <a href="#contact" class="btn btn-primary mobile-contact-btn">Contact</a>
+    <a href="#credentials" class="mobile-nav-link">Credentials</a>
+    <a href="assets/cv.pdf" download="Ibrahim_Hasan_CV.pdf" class="mobile-nav-link"><i class="fa-solid fa-arrow-down-to-line"></i> Resume</a>
+    <a href="#contact" class="btn btn-primary mobile-contact-btn">Get In Touch</a>
   </div>
 
   <main>
     <!-- Hero Section -->
     <section class="hero-section" id="hero">
-      <div class="hero-container">
+      <div class="container hero-container">
         <div class="hero-content">
-          <div class="badge" id="hero-badge">
+          <div class="hero-badge">
             <span class="badge-dot"></span>
-            <span class="badge-text" data-en="Available for freelance & collaborations" data-es="Disponible para freelance y colaborar">Available for freelance & collaborations</span>
+            <span class="badge-text">Available for contracts & collaborations</span>
           </div>
           
-          <h1 class="hero-title" id="hero-title-greeting">
-            <span class="greeting-prefix" data-en="Hey there, I'm" data-es="Hola, soy">Hey there, I'm</span>
-            <span class="gradient-text name-text">Ibrahim Hasan</span>
+          <h1 class="hero-title">
+            <span class="greeting">Hi, I'm</span>
+            <span class="name">Ibrahim Hasan</span>
           </h1>
 
           <div class="typing-container">
-            <span class="typing-prefix" data-en="I am a" data-es="Soy">I am a</span>
+            <span class="typing-prefix">Specialized in</span>
             <span class="typing-text"></span>
           </div>
 
-          <blockquote class="hero-quote">
-            <i class="fa-solid fa-quote-left"></i>
-            <span data-en="The only way to do great work is to love what you do." data-es="La única forma de hacer un gran trabajo es amar lo que haces.">The only way to do great work is to love what you do.</span>
-            <cite>— Steve Jobs</cite>
-          </blockquote>
-
-          <p class="hero-subtitle" data-en="Studying Computer Science at Independent University, Bangladesh. Football fanatic rooting for Real Madrid C.F. and building next-gen software & IoT hardware." data-es="Estudiando Ciencias de la Computación en la Universidad Independiente de Bangladesh. Fanático del fútbol que apoya al Real Madrid C.F. y construye software y hardware de IoT de próxima generación.">
-            Studying Computer Science at Independent University, Bangladesh. Football fanatic rooting for Real Madrid C.F. and building next-gen software & IoT hardware.
+          <p class="hero-subtitle">
+            A Computer Science & Engineering student at Independent University, Bangladesh. Backed by a strong track record of technical freelancing since 2016, I design robust software systems, implement IoT hardware solutions, and deliver data-driven research.
           </p>
 
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-gradient" id="btn-view-work">
-              <span data-en="View Projects" data-es="Ver Proyectos">View Projects</span> <i class="fa-solid fa-arrow-right"></i>
+            <a href="#projects" class="btn btn-accent">
+              <span>View Projects</span> <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a href="assets/cv.pdf" download="Ibrahim_Hasan_CV.pdf" class="btn btn-outline" id="btn-cv-download">
-              <i class="fa-solid fa-file-pdf"></i> <span data-en="Download CV" data-es="Descargar CV">Download CV</span>
+            <a href="assets/cv.pdf" download="Ibrahim_Hasan_CV.pdf" class="btn btn-outline">
+              <i class="fa-solid fa-file-pdf"></i> <span>Download CV</span>
             </a>
           </div>
 
@@ -119,97 +96,92 @@
             <a href="https://instagram.com/iriyasat" target="_blank" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://facebook.com/ihriyasat" target="_blank" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="https://wa.me/+8801791928002" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://www.peopleperhour.com/freelancer/business/ibrahim-hasan-professional-web-research-data-zqjwqwm" target="_blank" class="social-icon" aria-label="PeoplePerHour" title="PeoplePerHour"><i class="fa-solid fa-briefcase"></i></a>
           </div>
         </div>
 
         <div class="hero-visual">
-          <div class="image-wrapper">
-            <div class="image-border-gradient"></div>
-            <!-- Restored abstract globe system avatar -->
-            <img src="assets/avatar.png" alt="Ibrahim Hasan Globe Avatar" class="profile-avatar">
-          </div>
-          <!-- Tech tags floating -->
-          <div class="floating-badge tech-badge-1">
-            <i class="fa-solid fa-microchip"></i> <span>Raspberry Pi</span>
-          </div>
-          <div class="floating-badge tech-badge-2">
-            <i class="fa-brands fa-python"></i> <span>Python</span>
-          </div>
-          <div class="floating-badge tech-badge-3">
-            <i class="fa-solid fa-database"></i> <span>Java / SQL</span>
+          <div class="profile-card">
+            <div class="profile-image-container">
+              <img src="assets/profile.jpg" alt="Ibrahim Hasan Profile" class="profile-img">
+            </div>
+            <div class="profile-meta">
+              <h3>Ibrahim Hasan</h3>
+              <p class="profile-role">CSE Student & Freelancer</p>
+              <div class="meta-item"><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</div>
+              <div class="meta-item"><i class="fa-solid fa-envelope"></i> 2110316@iub.edu.bd</div>
+              <div class="meta-item"><i class="fa-solid fa-phone"></i> +880 1791 928002</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="scroll-indicator">
-        <div class="mouse">
-          <div class="wheel"></div>
-        </div>
-        <span data-en="Scroll Down" data-es="Deslizar">Scroll Down</span>
       </div>
     </section>
 
     <!-- About Section -->
     <section class="about-section section-padding" id="about">
       <div class="container">
-        <h2 class="section-title text-center" data-aos="fade-up">
-          <span class="gradient-text" data-en="About & Education" data-es="Sobre Mí y Educación">About & Education</span>
-        </h2>
-        <p class="section-subtitle text-center" data-en="Get to know the developer behind the code" data-es="Conoce al desarrollador detrás del código">
-          Get to know the developer behind the code
-        </p>
+        <h2 class="section-title text-center">About Me</h2>
+        <p class="section-subtitle text-center">My background, educational path, and linguistic profile.</p>
 
         <div class="about-grid">
-          <!-- Real Profile Photo Card -->
-          <div class="about-card profile-photo-card" data-aos="fade-right">
-            <div class="about-photo-wrapper">
-              <img src="assets/profile.jpg" alt="Ibrahim Hasan Profile" class="about-photo">
-            </div>
-            <div class="about-photo-caption">
-              <h3>Ibrahim Hasan</h3>
-              <p data-en="Student & Freelancer" data-es="Estudiante y Freelancer">Student & Freelancer</p>
-              <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</span>
+          <!-- Bio Column -->
+          <div class="about-col bio-col">
+            <h3>My Story</h3>
+            <p>
+              Born in Jeddah and raised in Narayanganj, I am currently based in Dhaka, Bangladesh. My passion lies in building interactive applications and designing IoT networks that bridge the gap between abstract software systems and physical hardware interfaces.
+            </p>
+            <p>
+              I am pursuing a Bachelor of Science in Computer Science & Engineering with a Minor in International Business at Independent University, Bangladesh (IUB). Through my studies and rigorous self-directed development, I have built systems using Raspberry Pi, microcontrollers, and multiple programming frameworks.
+            </p>
+            
+            <div class="languages-block">
+              <h3>Linguistic Profile</h3>
+              <div class="language-items">
+                <div class="lang-item">
+                  <span class="lang-name">Bengali</span>
+                  <span class="lang-level">Native</span>
+                </div>
+                <div class="lang-item">
+                  <span class="lang-name">English</span>
+                  <span class="lang-level">Fluent</span>
+                </div>
+                <div class="lang-item">
+                  <span class="lang-name">Spanish</span>
+                  <span class="lang-level">Elementary</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Narrative Card -->
-          <div class="about-card intro-card" data-aos="fade-up">
-            <h3 data-en="My Story" data-es="Mi Historia">My Story</h3>
-            <p data-en="Born in Jeddah, raised in Narayanganj, and currently coding in Dhaka, Bangladesh. I am an enthusiastic developer and researcher who bridges the gap between hardware and software, developing interactive experiences and IoT applications." data-es="Nacido en Yeda, criado en Narayanganj y actualmente programando en Daca, Bangladesh. Soy un desarrollador y investigador entusiasta que conecta el hardware con el software, desarrollando experiencias interactivas y aplicaciones de IoT.">
-              Born in Jeddah, raised in Narayanganj, and currently coding in Dhaka, Bangladesh. I am an enthusiastic developer and researcher who bridges the gap between hardware and software, developing interactive experiences and IoT applications.
-            </p>
-            <p data-en="Currently pursuing my academic studies at Independent University, Bangladesh (IUB), majoring in Computer Science & Engineering. I love solving algorithmic puzzles, coding, and exploring new frameworks." data-es="Actualmente cursando mis estudios académicos en la Universidad Independiente de Bangladesh (IUB), con especialización en Ingeniería y Ciencias de la Computación. Me encanta resolver acertijos algorítmicos, programar y explorar nuevos marcos de trabajo.">
-              Currently pursuing my academic studies at Independent University, Bangladesh (IUB), majoring in Computer Science & Engineering. I love solving algorithmic puzzles, coding, and exploring new frameworks.
-            </p>
-          </div>
+          <!-- Education Column -->
+          <div class="about-col edu-col">
+            <h3>Academic History</h3>
+            <div class="education-timeline">
+              <div class="edu-item">
+                <span class="edu-year">2021 – Present</span>
+                <div class="edu-details">
+                  <h4>Bachelor of Science in Computer Science</h4>
+                  <h5>Independent University, Bangladesh (IUB)</h5>
+                  <p class="edu-minor">Minor in International Business</p>
+                  <p class="edu-coursework">Coursework: DBMS, Operating Systems, Web Application Development, Software Engineering, Computer Networks</p>
+                </div>
+              </div>
+              
+              <div class="edu-item">
+                <span class="edu-year">2017 – 2021</span>
+                <div class="edu-details">
+                  <h4>International Advanced Levels (IAL) A-Levels</h4>
+                  <h5>Changes - An English Medium School</h5>
+                </div>
+              </div>
 
-          <!-- Education Card -->
-          <div class="about-card highlight-card" data-aos="fade-left">
-            <h3 data-en="Education" data-es="Educación">Education</h3>
-            <ul class="facts-list">
-              <li>
-                <div class="fact-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                <div class="fact-content">
-                  <strong>Independent University, Bangladesh (IUB)</strong>
-                  <span data-en="Bachelor of Science in Computer Science | Minor: International Business (2021 – Present)" data-es="Licenciatura en Ciencias de la Computación | Minor: Negocios Internacionales (2021 – Present)">Bachelor of Science in Computer Science | Minor: International Business (2021 – Present)</span>
-                  <span class="coursework" data-en="Coursework: DBMS, Operating Systems, Web Application Development, Software Engineering, Computer Networks" data-es="Cursos: DBMS, Sistemas Operativos, Aplicaciones Web, Ingeniería de Software, Redes de Computadoras">Coursework: DBMS, Operating Systems, Web Application Development, Software Engineering, Computer Networks</span>
+              <div class="edu-item">
+                <span class="edu-year">2012 – 2017</span>
+                <div class="edu-details">
+                  <h4>International Ordinary Levels (IGCSE) O-Levels</h4>
+                  <h5>Changes - An English Medium School</h5>
                 </div>
-              </li>
-              <li>
-                <div class="fact-icon"><i class="fa-solid fa-school"></i></div>
-                <div class="fact-content">
-                  <strong>Changes - An English Medium School</strong>
-                  <span data-en="International Advanced Levels (IAL) A-Levels (2017 – 2021)" data-es="Niveles Avanzados Internacionales (IAL) A-Levels (2017 – 2021)">International Advanced Levels (IAL) A-Levels (2017 – 2021)</span>
-                </div>
-              </li>
-              <li>
-                <div class="fact-icon"><i class="fa-solid fa-school-flag"></i></div>
-                <div class="fact-content">
-                  <strong>Changes - An English Medium School</strong>
-                  <span data-en="International Ordinary Levels (IGCSE) O-Levels (2012 – 2017)" data-es="Niveles Ordinarios Internacionales (IGCSE) O-Levels (2012 – 2017)">International Ordinary Levels (IGCSE) O-Levels (2012 – 2017)</span>
-                </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -218,103 +190,96 @@
     <!-- Skills Section -->
     <section class="skills-section section-padding" id="skills">
       <div class="container">
-        <h2 class="section-title text-center">
-          <span class="gradient-text" data-en="Skills & Technologies" data-es="Habilidades y Tecnologías">Skills & Technologies</span>
-        </h2>
-        <p class="section-subtitle text-center" data-en="A display of tools, languages, and technical frameworks from my CV" data-es="Una muestra de las herramientas, lenguajes y marcos técnicos de mi currículum">
-          A display of tools, languages, and technical frameworks from my CV
-        </p>
+        <h2 class="section-title text-center">Core Expertise</h2>
+        <p class="section-subtitle text-center">A structured summary of my technical skills, software proficiencies, and tools.</p>
 
         <div class="skills-grid">
-          <!-- Programming Languages Card -->
-          <div class="skill-category-card">
-            <div class="category-header">
+          <!-- Card 1 -->
+          <div class="skills-card">
+            <div class="skills-card-header">
               <i class="fa-solid fa-code"></i>
-              <h3 data-en="Programming & Libraries" data-es="Programación y Librerías">Programming & Libraries</h3>
+              <h3>Software Engineering</h3>
             </div>
-            <div class="skills-items">
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Python / Flask</span>
-                  <span>85%</span>
+            <div class="skills-card-body">
+              <div class="skill-category">
+                <h4>Languages</h4>
+                <div class="skill-tags">
+                  <span>Python</span>
+                  <span>Java</span>
+                  <span>C++</span>
+                  <span>C</span>
+                  <span>C#</span>
+                  <span>SQL</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
                 </div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
               </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Java / C++ / C / C#</span>
-                  <span>80%</span>
+              <div class="skill-category">
+                <h4>Frameworks & Libraries</h4>
+                <div class="skill-tags">
+                  <span>Flask</span>
+                  <span>Bootstrap 5</span>
                 </div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>HTML / CSS (Bootstrap 5)</span>
-                  <span>90%</span>
-                </div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
               </div>
             </div>
           </div>
 
-          <!-- Research & Operations Card -->
-          <div class="skill-category-card">
-            <div class="category-header">
+          <!-- Card 2 -->
+          <div class="skills-card">
+            <div class="skills-card-header">
+              <i class="fa-solid fa-microchip"></i>
+              <h3>IoT & Systems</h3>
+            </div>
+            <div class="skills-card-body">
+              <div class="skill-category">
+                <h4>Hardware Platform</h4>
+                <div class="skill-tags">
+                  <span>Raspberry Pi</span>
+                  <span>NodeMCU (ESP8266)</span>
+                  <span>Arduino Uno/Nano</span>
+                  <span>Microcontrollers</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <h4>Development Tools</h4>
+                <div class="skill-tags">
+                  <span>Arduino IDE</span>
+                  <span>Cisco Packet Tracer</span>
+                  <span>XAMPP</span>
+                  <span>SceneBuilder</span>
+                  <span>VS Code</span>
+                  <span>Sublime Text</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="skills-card">
+            <div class="skills-card-header">
               <i class="fa-solid fa-magnifying-glass-chart"></i>
-              <h3 data-en="Research & Data" data-es="Investigación y Datos">Research & Data</h3>
+              <h3>Data & Business</h3>
             </div>
-            <div class="skills-items">
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Web Research & Data Collection</span>
-                  <span>95%</span>
+            <div class="skills-card-body">
+              <div class="skill-category">
+                <h4>Analysis & Research</h4>
+                <div class="skill-tags">
+                  <span>Web Research</span>
+                  <span>Data Mining</span>
+                  <span>Web Scraping</span>
+                  <span>Market Analysis</span>
+                  <span>Data Collection</span>
                 </div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
               </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Data Analysis & Scraping</span>
-                  <span>85%</span>
+              <div class="skill-category">
+                <h4>Productivity & Ops</h4>
+                <div class="skill-tags">
+                  <span>Project Management</span>
+                  <span>MS Excel</span>
+                  <span>MS Word</span>
+                  <span>MS PowerPoint</span>
+                  <span>Virtual Assistance</span>
                 </div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Project Management & Coordination</span>
-                  <span>80%</span>
-                </div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Developer Tools Card -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <i class="fa-solid fa-screwdriver-wrench"></i>
-              <h3 data-en="Software & Languages" data-es="Software e Idiomas">Software & Languages</h3>
-            </div>
-            <div class="skills-items">
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>VS Code / Arduino IDE / Packet Tracer</span>
-                  <span>90%</span>
-                </div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Bengali / English</span>
-                  <span>95%</span>
-                </div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Spanish (Elementary 🇪🇸)</span>
-                  <span>35%</span>
-                </div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 35%"></div></div>
               </div>
             </div>
           </div>
@@ -325,39 +290,35 @@
     <!-- Experience Section -->
     <section class="experience-section section-padding" id="experience">
       <div class="container">
-        <h2 class="section-title text-center">
-          <span class="gradient-text" data-en="Work Experience" data-es="Experiencia Laboral">Work Experience</span>
-        </h2>
-        <p class="section-subtitle text-center" data-en="My professional roles and freelancing history" data-es="Mis roles profesionales e historial freelance">
-          My professional roles and freelancing history
-        </p>
+        <h2 class="section-title text-center">Professional Experience</h2>
+        <p class="section-subtitle text-center">My work history and professional engagements.</p>
 
-        <div class="timeline">
-          <!-- Experience 1 -->
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Jun 2016 – Present</div>
-            <div class="timeline-content">
-              <h3>Web Research, Data Entry & Virtual Assistant</h3>
-              <h4>PeoplePerHour (Freelance) | Remote</h4>
-              <ul class="timeline-bullets">
-                <li data-en="Conducted web research, data collection, and data analysis for international clients." data-es="Realicé investigación web, recopilación y análisis de datos para clientes internacionales.">Conducted web research, data collection, and data analysis for international clients.</li>
-                <li data-en="Provided administrative support and virtual assistance services." data-es="Proporcioné soporte administrativo y servicios de asistencia virtual.">Provided administrative support and virtual assistance services.</li>
-              </ul>
+        <div class="experience-list">
+          <div class="experience-item">
+            <div class="exp-meta">
+              <span class="exp-date">Jun 2016 – Present</span>
+              <h4 class="exp-company">PeoplePerHour</h4>
+              <span class="exp-location">Remote</span>
+            </div>
+            <div class="exp-content">
+              <h3>Web Researcher, Data Analyst & Virtual Assistant</h3>
+              <p class="exp-desc">
+                Engage in contract-based projects delivering structured market research, target data collection, and deep web scraping solutions for international clients. Provide operations support and handle complex Excel-based data organization workflows.
+              </p>
             </div>
           </div>
 
-          <!-- Experience 2 -->
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Jun 2022 – Jul 2025</div>
-            <div class="timeline-content">
+          <div class="experience-item">
+            <div class="exp-meta">
+              <span class="exp-date">Jun 2022 – Jul 2025</span>
+              <h4 class="exp-company">Caretutors.com</h4>
+              <span class="exp-location">Dhaka, Bangladesh</span>
+            </div>
+            <div class="exp-content">
               <h3>Part-time Teacher</h3>
-              <h4>Caretutors.com | Dhaka, Bangladesh</h4>
-              <ul class="timeline-bullets">
-                <li data-en="Provided one-on-one tutoring sessions for students to improve academic outcomes." data-es="Impartí tutorías individuales a estudiantes para mejorar los resultados académicos.">Provided one-on-one tutoring sessions for students to improve academic outcomes.</li>
-                <li data-en="Improved student understanding through structured teaching methods and customized lesson planning." data-es="Mejoré la comprensión del estudiante mediante métodos de enseñanza estructurados y planificación de lecciones a medida.">Improved student understanding through structured teaching methods and customized lesson planning.</li>
-              </ul>
+              <p class="exp-desc">
+                Instructed students one-on-one, delivering targeted curriculum paths in mathematics, sciences, and introductory computing. Evaluated and structured customized tutoring plans to enhance students' logical thinking and academic success.
+              </p>
             </div>
           </div>
         </div>
@@ -367,213 +328,146 @@
     <!-- Projects Section -->
     <section class="projects-section section-padding" id="projects">
       <div class="container">
-        <h2 class="section-title text-center">
-          <span class="gradient-text" data-en="Projects" data-es="Proyectos">Projects</span>
-        </h2>
-        <p class="section-subtitle text-center" data-en="Academic and personal projects listed in my curriculum vitae" data-es="Proyectos académicos y personales enumerados en mi currículum vitae">
-          Academic and personal projects listed in my curriculum vitae
-        </p>
+        <h2 class="section-title text-center">Projects</h2>
+        <p class="section-subtitle text-center">A curated selection of my hardware and software engineering work.</p>
 
         <div class="projects-grid">
-          <!-- Project 1: RetroPie Gaming Device -->
-          <div class="project-card" data-aos="fade-up">
-            <div class="project-header">
-              <div class="project-icon"><i class="fa-solid fa-gamepad"></i></div>
-              <span class="project-lang" data-en="Self Project (2026)" data-es="Proyecto Propio (2026)">Self Project (2026)</span>
-            </div>
-            <h3 class="project-title">RetroPie Gaming Device</h3>
-            <p class="project-desc" data-en="A custom retro gaming system built using a Raspberry Pi. Implemented custom emulator mappings, clean hardware enclosure setups, and optimized controller bindings to serve classic games smoothly." data-es="Un sistema de videojuegos retro personalizado construido usando una Raspberry Pi. Implementé asignaciones de emuladores personalizadas, carcasas de hardware limpias y enlaces de control optimizados para jugar clásicos fluidamente.">
-              A custom retro gaming system built using a Raspberry Pi. Implemented custom emulator mappings, clean hardware enclosure setups, and optimized controller bindings to serve classic games smoothly.
+          <!-- Project 1 -->
+          <div class="project-card">
+            <span class="project-category">Embedded Hardware</span>
+            <h3>RetroPie Gaming Device</h3>
+            <p class="project-desc">
+              Developed an integrated retro arcade station powered by Raspberry Pi. Optimized controller bindings, compiled custom Linux configurations, and resolved hardware-to-software mappings for classic game emulation.
             </p>
-            <div class="project-tech-tags">
+            <div class="project-tech">
               <span>Raspberry Pi</span>
-              <span>RetroPie</span>
               <span>Linux</span>
-              <span>Hardware Mapping</span>
+              <span>RetroPie</span>
+              <span>Hardware Config</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/iriyasat" target="_blank" class="project-link-btn"><i class="fa-brands fa-github"></i> Profile</a>
-            </div>
+            <a href="https://github.com/iriyasat" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> View Profile</a>
           </div>
 
-          <!-- Project 2: Otithi -->
-          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="project-header">
-              <div class="project-icon"><i class="fa-solid fa-hotel"></i></div>
-              <span class="project-lang" data-en="University Project (2025)" data-es="Proyecto Universitario (2025)">University Project (2025)</span>
-            </div>
-            <h3 class="project-title">Otithi</h3>
-            <p class="project-desc" data-en="A software application development project designed to simplify visitor tracking and guest logs. Features a modern, user-friendly interface with database management backends to log and track credentials." data-es="Un proyecto de desarrollo de aplicaciones de software diseñado para simplificar el seguimiento de visitantes y registros de huéspedes. Cuenta con una interfaz moderna y bases de datos para registrar credenciales.">
-              A software application development project designed to simplify visitor tracking and guest logs. Features a modern, user-friendly interface with database management backends to log and track credentials.
+          <!-- Project 2 -->
+          <div class="project-card">
+            <span class="project-category">Web Application</span>
+            <h3>Otithi Visitor System</h3>
+            <p class="project-desc">
+              Designed a digital guest book system to log and track visitor credentials. Engineered a secure database backend with Java-based UI modules to provide real-time updates and exportable CSV entry reports.
             </p>
-            <div class="project-tech-tags">
-              <span>Database (SQL)</span>
-              <span>Software Engineering</span>
-              <span>Java / HTML</span>
-              <span>UI Design</span>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>SQL</span>
+              <span>Database Design</span>
+              <span>SceneBuilder</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/iriyasat/Otithi" target="_blank" class="project-link-btn"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
+            <a href="https://github.com/iriyasat/Otithi" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> View Repository</a>
           </div>
 
-          <!-- Project 3: EnviroGuardian -->
-          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="project-header">
-              <div class="project-icon"><i class="fa-solid fa-wind"></i></div>
-              <span class="project-lang" data-en="University Project (2025)" data-es="Proyecto Universitario (2025)">University Project (2025)</span>
-            </div>
-            <h3 class="project-title">EnviroGuardian</h3>
-            <p class="project-desc" data-en="An IoT weather, pollution, and air-quality monitoring system. It uses an ESP8266 NodeMCU to capture sensor readings (temperature, humidity, CO levels, AQI) using DHT22, MQ135, and MQ9 sensors and publishes reports." data-es="Un sistema de monitoreo de clima, contaminación y calidad del aire basado en IoT. Utiliza un ESP8266 NodeMCU para capturar lecturas de sensores (temperatura, humedad, niveles de CO, AQI) con sensores DHT22, MQ135 y MQ9 y genera informes.">
-              An IoT weather, pollution, and air-quality monitoring system. It uses an ESP8266 NodeMCU to capture sensor readings (temperature, humidity, CO levels, AQI) using DHT22, MQ135, and MQ9 sensors and publishes reports.
+          <!-- Project 3 -->
+          <div class="project-card">
+            <span class="project-category">IoT & Environment</span>
+            <h3>EnviroGuardian Node</h3>
+            <p class="project-desc">
+              Created an IoT air-quality and micro-climate monitor. Configured an ESP8266 NodeMCU to capture sensor datasets (temperature, humidity, air toxins, carbon monoxide) and push real-time readings to web portals.
             </p>
-            <div class="project-tech-tags">
-              <span>NodeMCU</span>
+            <div class="project-tech">
+              <span>ESP8266 NodeMCU</span>
               <span>C++</span>
-              <span>DHT22 / MQ135 / MQ9</span>
-              <span>Air Quality (AQI)</span>
+              <span>DHT22</span>
+              <span>MQ135 / MQ9</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/iriyasat/EnviroGuardian" target="_blank" class="project-link-btn"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
+            <a href="https://github.com/iriyasat/EnviroGuardian" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> View Repository</a>
           </div>
 
-          <!-- Project 4: GreenGrid -->
-          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="project-header">
-              <div class="project-icon"><i class="fa-solid fa-seedling"></i></div>
-              <span class="project-lang" data-en="University Project (2023)" data-es="Proyecto Universitario (2023)">University Project (2023)</span>
-            </div>
-            <h3 class="project-title">GreenGrid</h3>
-            <p class="project-desc" data-en="A dedicated web application development project aimed at environmental sustainability. Implemented interactive dashboards, frontend charts, and maps for monitoring environmental grids and resource usage metrics." data-es="Un proyecto dedicado al desarrollo de aplicaciones web enfocado en la sostenibilidad ambiental. Implementó paneles interactivos, gráficos frontend y mapas para monitorear cuadrículas ambientales y métricas.">
-              A dedicated web application development project aimed at environmental sustainability. Implemented interactive dashboards, frontend charts, and maps for monitoring environmental grids and resource usage metrics.
+          <!-- Project 4 -->
+          <div class="project-card">
+            <span class="project-category">Web Platform</span>
+            <h3>GreenGrid Sustainable App</h3>
+            <p class="project-desc">
+              A responsive frontend dashboard tracking resource grid metrics and environmental impact indicators. Leveraged interactive charting libraries to map and visualize grid performance.
             </p>
-            <div class="project-tech-tags">
-              <span>Web Development</span>
+            <div class="project-tech">
               <span>HTML5 / CSS3</span>
               <span>JavaScript</span>
-              <span>Data Visuals</span>
+              <span>Data Visualizations</span>
+              <span>Responsive Web</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/iriyasat" target="_blank" class="project-link-btn"><i class="fa-brands fa-github"></i> Profile</a>
-            </div>
+            <a href="https://github.com/iriyasat" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> View Profile</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Training & Certifications, Honors & Awards Section -->
-    <section class="certifications-section section-padding" id="certifications">
+    <!-- Credentials Section -->
+    <section class="credentials-section section-padding" id="credentials">
       <div class="container">
-        <h2 class="section-title text-center">
-          <span class="gradient-text" data-en="Certifications & Awards" data-es="Certificaciones y Premios">Certifications & Awards</span>
-        </h2>
-        <p class="section-subtitle text-center" data-en="My academic training courses and project showcase achievements" data-es="Mis cursos de formación académica y logros en exposiciones de proyectos">
-          My academic training courses and project showcase achievements
-        </p>
+        <h2 class="section-title text-center">Credentials & Achievements</h2>
+        <p class="section-subtitle text-center">Certifications, professional affiliations, and honors.</p>
 
-        <div class="certifications-grid">
+        <div class="credentials-grid">
           <!-- Certifications Card -->
-          <div class="about-card certification-card" data-aos="fade-right">
-            <h3 data-en="Training & Certifications" data-es="Formación y Certificaciones">Training & Certifications</h3>
-            <ul class="cert-list">
+          <div class="credentials-box">
+            <h3>Professional Certifications</h3>
+            <ul class="credentials-list-items">
               <li>
-                <span class="cert-date">Aug 2025</span>
-                <div class="cert-info">
+                <span class="item-date">Aug 2025</span>
+                <div class="item-info">
                   <strong>AI+ Prompt Engineer Level 1™</strong>
-                  <span>AI CERTs & Agent X | Dhaka, Bangladesh</span>
+                  <span>AI CERTs & Agent X</span>
                 </div>
               </li>
               <li>
-                <span class="cert-date">May 2025</span>
-                <div class="cert-info">
+                <span class="item-date">May 2025</span>
+                <div class="item-info">
                   <strong>CCNA: Introduction to Networks</strong>
-                  <span>Cisco Networking Academy & Independent University, Bangladesh</span>
+                  <span>Cisco Networking Academy & IUB</span>
                 </div>
               </li>
               <li>
-                <span class="cert-date">Jul 2020</span>
-                <div class="cert-info">
+                <span class="item-date">Jul 2020</span>
+                <div class="item-info">
                   <strong>CCNA: Introduction to Cybersecurity</strong>
-                  <span>Cisco Networking Academy | Remote</span>
+                  <span>Cisco Networking Academy</span>
                 </div>
               </li>
               <li>
-                <span class="cert-date">Jun 2020</span>
-                <div class="cert-info">
+                <span class="item-date">Jun 2020</span>
+                <div class="item-info">
                   <strong>The Fundamentals of Digital Marketing</strong>
-                  <span>Google Digital Garage | Remote</span>
+                  <span>Google Digital Garage</span>
                 </div>
               </li>
             </ul>
           </div>
 
           <!-- Awards & Affiliations Card -->
-          <div class="about-card awards-card" data-aos="fade-left">
-            <h3 data-en="Honors, Awards & Roles" data-es="Honores, Premios y Roles">Honors, Awards & Roles</h3>
-            <ul class="cert-list">
+          <div class="credentials-box">
+            <h3>Honors & Affiliations</h3>
+            <ul class="credentials-list-items">
               <li>
-                <span class="cert-date award-tag">Award</span>
-                <div class="cert-info">
+                <span class="item-badge award">Award</span>
+                <div class="item-info">
                   <strong>Algorithm Project Showcase Champion</strong>
-                  <span>Techfest Spring 2024, Independent University, Bangladesh</span>
-                  <p class="award-desc" data-en="Awarded 1st place for designing and optimizing complex search/sorting algorithms under competitive review." data-es="Galardonado con el primer lugar por diseñar y optimizar algoritmos complejos de búsqueda/ordenamiento bajo revisión competitiva.">Awarded 1st place for designing and optimizing complex search/sorting algorithms under competitive review.</p>
+                  <span>Techfest Spring 2024 | Independent University, Bangladesh</span>
+                  <p class="item-desc">Secured 1st place in algorithm performance design and code optimization competitions.</p>
                 </div>
               </li>
               <li>
-                <span class="cert-date role-tag">Sports</span>
-                <div class="cert-info">
+                <span class="item-badge role">Sports</span>
+                <div class="item-info">
                   <strong>Joint Secretary, Sports | Dhanmondi Progoti Sangha</strong>
-                  <span data-en="Dec 2024 – Present | Coordinate 2nd Division cricket team schedules, logistics & motivational leadership." data-es="Dic 2024 – Presente | Coordino horarios del equipo de críquet de 2ª División, logística y liderazgo motivacional.">Dec 2024 – Present | Coordinate 2nd Division cricket team schedules, logistics & motivational leadership.</span>
+                  <span>Dec 2024 – Present | Direct team schedules, match logistics, and divisional leagues coordination.</span>
                 </div>
               </li>
               <li>
-                <span class="cert-date role-tag">Member</span>
-                <div class="cert-info">
+                <span class="item-badge role">Member</span>
+                <div class="item-info">
                   <strong>General Member | EMK Center (American Cultural Center)</strong>
-                  <span data-en="Dec 2023 – Present | Lead cross-cultural workshops and professional facilitation programs." data-es="Dic 2023 – Presente | Lidero talleres interculturales y programas de facilitación profesional.">Dec 2023 – Present | Lead cross-cultural workshops and professional facilitation programs.</span>
+                  <span>Dec 2023 – Present | Participate in professional development and cross-cultural workshops.</span>
                 </div>
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Fun Zone / Real Madrid Trivia Section -->
-    <section class="fun-section section-padding" id="fun-zone">
-      <div class="container">
-        <div class="glass-container">
-          <div class="fun-grid">
-            <div class="fun-content">
-              <div class="badge badge-madrid">
-                <i class="fa-solid fa-star"></i> Hala Madrid!
-              </div>
-              <h2 class="fun-title" data-en="The Madridista Corner" data-es="El Rincón Madridista">The Madridista Corner</h2>
-              <p data-en="Apart from writing code and tutoring, I am a passionate supporter of Real Madrid C.F. and a big TV show enthusiast. Let's test your knowledge about the greatest club in football history!" data-es="Además de escribir código y dar tutorías, soy un apasionado seguidor del Real Madrid C.F. y un gran entusiasta de las series de televisión. ¡Pongamos a prueba tus conocimientos sobre el club más grande de la historia del fútbol!">
-                Apart from writing code and tutoring, I am a passionate supporter of Real Madrid C.F. and a big TV show enthusiast. Let's test your knowledge about the greatest club in football history!
-              </p>
-              
-              <!-- Trivia Interactive App -->
-              <div class="trivia-widget">
-                <div class="trivia-question-box">
-                  <span class="trivia-question-number" id="trivia-q-num" data-en="Question 1 of 3" data-es="Pregunta 1 de 3">Question 1 of 3</span>
-                  <p class="trivia-question" id="trivia-q" data-en="How many UEFA Champions League titles has Real Madrid won?" data-es="¿Cuántas copas de la UEFA Champions League ha ganado el Real Madrid?">How many UEFA Champions League titles has Real Madrid won?</p>
-                </div>
-                <div class="trivia-options" id="trivia-opts">
-                  <!-- JS will populate options -->
-                </div>
-                <div class="trivia-feedback" id="trivia-feed"></div>
-                <button class="btn btn-outline trivia-next-btn d-none" id="trivia-next" data-en="Next Question" data-es="Siguiente Pregunta">Next Question</button>
-              </div>
-            </div>
-            
-            <div class="fun-visual">
-              <div class="madrid-shield-glow">
-                <i class="fa-solid fa-shield-halved madrid-icon"></i>
-                <div class="shield-text">RMCF</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -582,37 +476,36 @@
     <!-- Contact Section -->
     <section class="contact-section section-padding" id="contact">
       <div class="container">
-        <h2 class="section-title text-center">
-          <span class="gradient-text" data-en="Get In Touch" data-es="Contacto">Get In Touch</span>
-        </h2>
-        <p class="section-subtitle text-center" data-en="Have a project in mind, want to collaborate or just talk football?" data-es="¿Tienes un proyecto en mente, quieres colaborar o simplemente hablar de fútbol?">
-          Have a project in mind, want to collaborate or just talk football?
-        </p>
+        <h2 class="section-title text-center">Get In Touch</h2>
+        <p class="section-subtitle text-center">Have a contract role, project request, or inquiry? Leave a message.</p>
 
-        <div class="contact-container">
-          <!-- Formspree Integration -->
+        <div class="contact-card-container">
           <form class="contact-form" id="contact-form" action="https://formspree.io/f/mnqeolzd" method="POST">
-            <div class="form-grid">
-              <div class="form-group">
-                <label for="name" data-en="Your Name" data-es="Tu Nombre">Your Name</label>
+            <div class="form-row">
+              <div class="form-control-group">
+                <label for="name">Full Name</label>
                 <input type="text" name="name" id="name" required placeholder="John Doe">
               </div>
-              <div class="form-group">
-                <label for="email" data-en="Your Email" data-es="Tu Correo Electrónico">Your Email</label>
-                <input type="email" name="email" id="email" required placeholder="john@example.com">
+              <div class="form-control-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" required placeholder="johndoe@example.com">
               </div>
             </div>
-            <div class="form-group">
-              <label for="subject" data-en="Subject" data-es="Asunto">Subject</label>
-              <input type="text" name="_subject" id="subject" required placeholder="Let's build something cool">
+            
+            <div class="form-control-group">
+              <label for="subject">Subject</label>
+              <input type="text" name="_subject" id="subject" required placeholder="Consultation request">
             </div>
-            <div class="form-group">
-              <label for="message" data-en="Message" data-es="Mensaje">Message</label>
-              <textarea name="message" id="message" rows="5" required placeholder="Hi Ibrahim..."></textarea>
+
+            <div class="form-control-group">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="6" required placeholder="Dear Ibrahim, I would like to discuss..."></textarea>
             </div>
-            <button type="submit" class="btn btn-gradient btn-submit">
-              <span data-en="Send Message" data-es="Enviar Mensaje">Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+
+            <button type="submit" class="btn btn-accent btn-submit-form">
+              <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
             </button>
+            
             <div class="form-status" id="form-status"></div>
           </form>
         </div>
@@ -625,25 +518,24 @@
     <div class="container footer-container">
       <div class="footer-left">
         <p class="copyright">&copy; 2026 Ibrahim Hasan. All rights reserved.</p>
-        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
-          <i class="fa-solid fa-location-dot"></i> Hatirpool, Dhaka, Bangladesh | <i class="fa-solid fa-envelope"></i> 2110316@iub.edu.bd
+        <p class="footer-meta-info">
+          Hatirpool, Dhaka, Bangladesh | 2110316@iub.edu.bd
         </p>
       </div>
       <div class="footer-right">
-        <div class="footer-socials">
+        <div class="footer-social-icons">
           <a href="https://github.com/iriyasat" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
           <a href="https://linkedin.com/in/ihriyasat" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://twitter.com/ihriyasat" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
           <a href="https://instagram.com/iriyasat" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://facebook.com/ihriyasat" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="https://wa.me/+8801791928002" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://www.peopleperhour.com/freelancer/business/ibrahim-hasan-professional-web-research-data-zqjwqwm" target="_blank" aria-label="PeoplePerHour" title="PeoplePerHour"><i class="fa-solid fa-briefcase"></i></a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Main JavaScript File -->
   <script src="script.js"></script>
 </body>
 </html>
