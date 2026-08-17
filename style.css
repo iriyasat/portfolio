@@ -438,7 +438,7 @@ header.scrolled .nav-container {
   transform: translateY(-2px);
 }
 
-/* --- Full-Scroll Ambient Background Animation --- */
+/* --- High-Graphics Full-Scroll Background Animation --- */
 .bg-animation-container {
   position: fixed;
   top: 0;
@@ -450,72 +450,98 @@ header.scrolled .nav-container {
   z-index: 0;
 }
 
+.bg-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(99, 102, 241, 0.15) 1.2px, transparent 1.2px),
+    radial-gradient(rgba(45, 212, 191, 0.1) 1.2px, transparent 1.2px);
+  background-size: 40px 40px, 80px 80px;
+  background-position: 0 0, 20px 20px;
+  opacity: 0.7;
+}
+
 .bg-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(85px);
+  filter: blur(38px);
   pointer-events: none;
   will-change: transform;
 }
 
 .bg-orb-1 {
-  width: 520px;
-  height: 520px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.16) 0%, rgba(99, 102, 241, 0) 70%);
-  top: -120px;
-  left: -120px;
-  animation: floatOrbTopLeft 14s ease-in-out infinite alternate;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle at 35% 35%, rgba(99, 102, 241, 0.48) 0%, rgba(99, 102, 241, 0.15) 50%, rgba(99, 102, 241, 0) 75%);
+  box-shadow: 0 0 90px rgba(99, 102, 241, 0.35);
+  top: -80px;
+  left: -80px;
+  animation: floatOrbTopLeft 12s ease-in-out infinite alternate;
 }
 
 .bg-orb-2 {
-  width: 480px;
-  height: 480px;
-  background: radial-gradient(circle, rgba(45, 212, 191, 0.14) 0%, rgba(45, 212, 191, 0) 70%);
-  top: 25%;
-  right: -140px;
-  animation: floatOrbTopRight 16s ease-in-out infinite alternate;
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(circle at 65% 35%, rgba(45, 212, 191, 0.45) 0%, rgba(45, 212, 191, 0.12) 50%, rgba(45, 212, 191, 0) 75%);
+  box-shadow: 0 0 80px rgba(45, 212, 191, 0.32);
+  top: 22%;
+  right: -100px;
+  animation: floatOrbTopRight 14s ease-in-out infinite alternate;
 }
 
 .bg-orb-3 {
-  width: 560px;
-  height: 560px;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.13) 0%, rgba(168, 85, 247, 0) 70%);
-  bottom: 15%;
-  left: -160px;
-  animation: floatOrbBottomLeft 18s ease-in-out infinite alternate;
+  width: 540px;
+  height: 540px;
+  background: radial-gradient(circle at 40% 60%, rgba(168, 85, 247, 0.42) 0%, rgba(168, 85, 247, 0.12) 50%, rgba(168, 85, 247, 0) 75%);
+  box-shadow: 0 0 100px rgba(168, 85, 247, 0.3);
+  bottom: 12%;
+  left: -120px;
+  animation: floatOrbBottomLeft 16s ease-in-out infinite alternate;
 }
 
 .bg-orb-4 {
   width: 420px;
   height: 420px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(45, 212, 191, 0) 70%);
-  bottom: -120px;
-  right: 12%;
-  animation: floatOrbBottomRight 15s ease-in-out infinite alternate;
+  background: radial-gradient(circle at 60% 40%, rgba(56, 189, 248, 0.42) 0%, rgba(45, 212, 191, 0.1) 50%, rgba(56, 189, 248, 0) 75%);
+  box-shadow: 0 0 75px rgba(56, 189, 248, 0.3);
+  bottom: -80px;
+  right: 15%;
+  animation: floatOrbBottomRight 13s ease-in-out infinite alternate;
 }
 
-@keyframes floatOrbTopLeft {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(120px, 80px) scale(1.15); }
-  100% { transform: translate(-40px, 140px) scale(0.9); }
+.bg-light-beam {
+  position: absolute;
+  width: 700px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.7), rgba(45, 212, 191, 0.85), transparent);
+  filter: blur(1px);
+  opacity: 0.6;
 }
 
-@keyframes floatOrbTopRight {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-100px, 100px) scale(1.2); }
-  100% { transform: translate(40px, -60px) scale(0.95); }
+.bg-light-beam-1 {
+  top: 18%;
+  left: -200px;
+  transform: rotate(-35deg);
+  animation: laserPulse1 8s ease-in-out infinite alternate;
 }
 
-@keyframes floatOrbBottomLeft {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(140px, -90px) scale(1.1); }
-  100% { transform: translate(-50px, -150px) scale(0.95); }
+.bg-light-beam-2 {
+  bottom: 28%;
+  right: -200px;
+  transform: rotate(25deg);
+  animation: laserPulse2 10s ease-in-out infinite alternate;
 }
 
-@keyframes floatOrbBottomRight {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-120px, -70px) scale(1.22); }
-  100% { transform: translate(60px, 80px) scale(0.88); }
+@keyframes laserPulse1 {
+  0% { opacity: 0.25; transform: rotate(-35deg) translateY(0); }
+  50% { opacity: 0.75; transform: rotate(-35deg) translateY(45px); }
+  100% { opacity: 0.35; transform: rotate(-35deg) translateY(-35px); }
+}
+
+@keyframes laserPulse2 {
+  0% { opacity: 0.3; transform: rotate(25deg) translateY(0); }
+  50% { opacity: 0.8; transform: rotate(25deg) translateY(-55px); }
+  100% { opacity: 0.25; transform: rotate(25deg) translateY(35px); }
 }
 
 /* Hero Visual (Profile Card & Modern Background Animation) */
