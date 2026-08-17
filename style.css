@@ -855,6 +855,36 @@ header.scrolled .nav-container {
   transition: var(--transition);
 }
 
+.project-card.featured {
+  grid-column: 1 / -1;
+}
+
+.sub-project-item {
+  border-top: 1px solid var(--border-light);
+  padding-top: 18px;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-project-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.badge-year {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--primary);
+  background-color: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
 .project-card:hover {
   border-color: var(--border-focus);
   transform: translateY(-2px);
