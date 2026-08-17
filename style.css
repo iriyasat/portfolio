@@ -438,6 +438,86 @@ header.scrolled .nav-container {
   transform: translateY(-2px);
 }
 
+/* --- Full-Scroll Ambient Background Animation --- */
+.bg-animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.bg-orb-1 {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.16) 0%, rgba(99, 102, 241, 0) 70%);
+  top: -120px;
+  left: -120px;
+  animation: floatOrbTopLeft 14s ease-in-out infinite alternate;
+}
+
+.bg-orb-2 {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.14) 0%, rgba(45, 212, 191, 0) 70%);
+  top: 25%;
+  right: -140px;
+  animation: floatOrbTopRight 16s ease-in-out infinite alternate;
+}
+
+.bg-orb-3 {
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.13) 0%, rgba(168, 85, 247, 0) 70%);
+  bottom: 15%;
+  left: -160px;
+  animation: floatOrbBottomLeft 18s ease-in-out infinite alternate;
+}
+
+.bg-orb-4 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(45, 212, 191, 0) 70%);
+  bottom: -120px;
+  right: 12%;
+  animation: floatOrbBottomRight 15s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrbTopLeft {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(120px, 80px) scale(1.15); }
+  100% { transform: translate(-40px, 140px) scale(0.9); }
+}
+
+@keyframes floatOrbTopRight {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-100px, 100px) scale(1.2); }
+  100% { transform: translate(40px, -60px) scale(0.95); }
+}
+
+@keyframes floatOrbBottomLeft {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(140px, -90px) scale(1.1); }
+  100% { transform: translate(-50px, -150px) scale(0.95); }
+}
+
+@keyframes floatOrbBottomRight {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-120px, -70px) scale(1.22); }
+  100% { transform: translate(60px, 80px) scale(0.88); }
+}
+
 /* Hero Visual (Profile Card & Modern Background Animation) */
 .hero-visual {
   position: relative;
