@@ -1067,6 +1067,7 @@ header.scrolled .nav-container {
 }
 
 .form-status {
+  display: none;
   text-align: center;
   font-size: 0.85rem;
   margin-top: 14px;
