@@ -513,34 +513,34 @@
         <p class="section-subtitle text-center">Have a contract role, project request, or inquiry? Leave a message.</p>
 
         <div class="contact-card-container">
-          <form class="contact-form" id="contact-form" action="https://formspree.io/f/xaqzjbko" method="POST">
+          <form class="contact-form" id="contact-form" action="https://api.iriyasat.dev/contact" method="POST">
             <div class="form-row">
               <div class="form-control-group">
                 <label for="name">Full Name</label>
-                <input type="text" name="name" id="name" required placeholder="Your Name" data-fs-field>
+                <input type="text" name="name" id="name" required placeholder="Your Name">
               </div>
               <div class="form-control-group">
                 <label for="email">Email Address</label>
-                <input type="email" name="email" id="email" required placeholder="your.email@example.com" data-fs-field>
+                <input type="email" name="email" id="email" required placeholder="your.email@example.com">
               </div>
             </div>
             
             <div class="form-control-group">
               <label for="subject">Subject</label>
-              <input type="text" name="_subject" id="subject" required placeholder="e.g., Project Inquiry / Job Opportunity" data-fs-field>
+              <input type="text" name="_subject" id="subject" required placeholder="e.g., Project Inquiry / Job Opportunity">
             </div>
 
             <div class="form-control-group">
               <label for="message">Message</label>
-              <textarea name="message" id="message" rows="6" required placeholder="Hi Ibrahim, I would like to discuss..." data-fs-field></textarea>
+              <textarea name="message" id="message" rows="6" required placeholder="Hi Ibrahim, I would like to discuss..."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-accent btn-submit-form" data-fs-submit-btn>
+            <button type="submit" class="btn btn-accent btn-submit-form">
               <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
             </button>
             
-            <div class="form-status success" data-fs-success>Message sent successfully! I will get back to you soon.</div>
-            <div class="form-status error" data-fs-error>Oops! There was a problem submitting your form.</div>
+            <div class="form-status success" id="form-success">Message sent successfully! I will get back to you soon.</div>
+            <div class="form-status error" id="form-error">Oops! There was a problem submitting your form.</div>
           </form>
         </div>
       </div>
@@ -571,11 +571,5 @@
 
   <!-- Main JavaScript File -->
   <script src="script.js"></script>
-  <!-- Formspree SDK Integration -->
-  <script>
-    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-    formspree('initForm', { formElement: '#contact-form', formId: 'xaqzjbko' });
-  </script>
-  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>

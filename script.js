@@ -65,3 +65,47 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// --- Contact Form AJAX Handler (Cloudflare API / Worker) ---
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    if (successMsg) successMsg.style.display = 'none';
+    if (errorMsg) errorMsg.style.display = 'none';
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+
+    const formData = {
+      name: contactForm.name.value,
+      email: contactForm.email.value,
+      subject: contactForm._subject.value,
+      message: contactForm.message.value
+    };
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        if (successMsg) successMsg.style.display = 'block';
+        contactForm.reset();
+      } else {
+        if (errorMsg) errorMsg.style.display = 'block';
+      }
+    } catch (err) {
+      if (errorMsg) errorMsg.style.display = 'block';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>';
+    }
+  });
+}
+
