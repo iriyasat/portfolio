@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// --- Contact Form Handler (Direct Gmail Delivery) ---
+// --- Contact Form Handler (Self-Hosted Zero 3rd-Party API) ---
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
@@ -86,11 +86,11 @@ if (contactForm) {
     const message = contactForm.message.value.trim();
 
     try {
-      // Deliver email straight to your Gmail (ihriyasat@gmail.com)
-      const mailResponse = await fetch('https://formspree.io/f/xaqzjbko', {
+      // Deliver email via your self-hosted API (https://api.iriyasat.dev/contact)
+      const mailResponse = await fetch('https://api.iriyasat.dev/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ name, email, _subject: subject, message })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, subject, message })
       });
 
       if (mailResponse.ok) {
