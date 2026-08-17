@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// --- Contact Form Handler (Self-Hosted Supabase & Ntfy) ---
+// --- Contact Form Handler (Gmail via Formspree + Supabase DB + Ntfy) ---
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
@@ -89,8 +89,15 @@ if (contactForm) {
     const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyAgCiAgICAicm9sZSI6ICJhbm9uIiwKICAgICJpc3MiOiAic3VwYWJhc2UtZGVtbyIsCiAgICAiaWF0IjogMTY0MTc2OTIwMCwKICAgICJleHAiOiAxNzk5NTM1NjAwCn0.dc_X5iR_VP_qT0zsiyj_I_OZ2T9FtRU2BBNWN8Bu4GE';
 
     try {
-      // 1. Save message to self-hosted Supabase PostgreSQL DB
-      const response = await fetch(supabaseUrl, {
+      // 1. Deliver email straight to your Gmail (ihriyasat@gmail.com) via Formspree
+      const mailResponse = await fetch('https://formspree.io/f/xaqzjbko', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name, email, _subject: subject, message })
+      });
+
+      // 2. Save a copy to your self-hosted Supabase PostgreSQL DB
+      fetch(supabaseUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -99,21 +106,18 @@ if (contactForm) {
           'Prefer': 'return=minimal'
         },
         body: JSON.stringify({ name, email, subject, message })
-      });
+      }).catch(() => {});
 
-      if (response.ok) {
+      // 3. Send instant push notification to self-hosted Ntfy
+      fetch('https://ntfy.iriyasat.dev/portfolio_contact', {
+        method: 'POST',
+        headers: { 'Title': `New Message: ${name}`, 'Priority': 'high' },
+        body: `From: ${name} (${email})\nSubject: ${subject}\n\n${message}`
+      }).catch(() => {});
+
+      if (mailResponse.ok) {
         if (successMsg) successMsg.style.display = 'block';
         contactForm.reset();
-
-        // 2. Send instant push notification to self-hosted Ntfy
-        fetch('https://ntfy.iriyasat.dev/portfolio_contact', {
-          method: 'POST',
-          headers: {
-            'Title': `New Message: ${name}`,
-            'Priority': 'high'
-          },
-          body: `From: ${name} (${email})\nSubject: ${subject}\n\n${message}`
-        }).catch(() => {});
       } else {
         if (errorMsg) errorMsg.style.display = 'block';
       }
