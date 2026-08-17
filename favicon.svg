@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="128" fill="#090b11"/>
-  <rect x="8" y="8" width="496" height="496" rx="120" fill="none" stroke="#6366f1" stroke-width="8" stroke-opacity="0.3"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="'Outfit', 'Inter', system-ui, -apple-system, sans-serif" font-weight="800" font-size="200" letter-spacing="-4">
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="'Outfit', 'Inter', system-ui, -apple-system, sans-serif" font-weight="900" font-size="320" letter-spacing="-8">
     <tspan fill="#6366f1">&lt;</tspan><tspan fill="#f8fafc">ih</tspan><tspan fill="#6366f1">/&gt;</tspan>
   </text>
 </svg>
