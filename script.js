@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// --- Contact Form AJAX Handler (Cloudflare API / Worker) ---
+// --- Contact Form Handler (Self-Hosted Supabase & Ntfy) ---
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
@@ -80,23 +80,40 @@ if (contactForm) {
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
 
-    const formData = {
-      name: contactForm.name.value,
-      email: contactForm.email.value,
-      subject: contactForm._subject.value,
-      message: contactForm.message.value
-    };
+    const name = contactForm.name.value.trim();
+    const email = contactForm.email.value.trim();
+    const subject = contactForm._subject.value.trim();
+    const message = contactForm.message.value.trim();
+
+    const supabaseUrl = 'https://supabase.iriyasat.dev/rest/v1/contact_messages';
+    const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyAgCiAgICAicm9sZSI6ICJhbm9uIiwKICAgICJpc3MiOiAic3VwYWJhc2UtZGVtbyIsCiAgICAiaWF0IjogMTY0MTc2OTIwMCwKICAgICJleHAiOiAxNzk5NTM1NjAwCn0.dc_X5iR_VP_qT0zsiyj_I_OZ2T9FtRU2BBNWN8Bu4GE';
 
     try {
-      const response = await fetch(contactForm.action, {
+      // 1. Save message to self-hosted Supabase PostgreSQL DB
+      const response = await fetch(supabaseUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': anonKey,
+          'Authorization': `Bearer ${anonKey}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ name, email, subject, message })
       });
 
       if (response.ok) {
         if (successMsg) successMsg.style.display = 'block';
         contactForm.reset();
+
+        // 2. Send instant push notification to self-hosted Ntfy
+        fetch('https://ntfy.iriyasat.dev/portfolio_contact', {
+          method: 'POST',
+          headers: {
+            'Title': `New Message: ${name}`,
+            'Priority': 'high'
+          },
+          body: `From: ${name} (${email})\nSubject: ${subject}\n\n${message}`
+        }).catch(() => {});
       } else {
         if (errorMsg) errorMsg.style.display = 'block';
       }
